@@ -1,9 +1,4 @@
-import streamlit as st
 
-st.title("My Automation System")
-
-if st.button("Run Automation"):
-    st.write("Running...")
     # call your automation function here
 import asyncio
 import os
