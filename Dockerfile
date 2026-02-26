@@ -1,10 +1,9 @@
-FROM python:3.10
+FROM mcr.microsoft.com/playwright/python:v1.42.0-jammy
 
 WORKDIR /app
 COPY . /app
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-RUN pip install playwright
-RUN playwright install --with-deps
 
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
